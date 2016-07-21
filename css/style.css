@@ -1,0 +1,547 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+@font-face {
+    font-family: 'Fira Sans Medium';
+    src: url('fonts/fira-sans/firasans-medium.eot');
+    src: url('fonts/fira-sans/firasans-medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/fira-sans/firasans-medium.woff2') format('woff2'),
+    url('fonts/fira-sans/firasans-medium.woff') format('woff'),
+    url('fonts/fira-sans/firasans-medium.ttf') format('truetype'),
+    url('fonts/fira-sans/firasans-medium.svg#fira_sansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('fonts/open-sans/opensans-bold.eot');
+    src: url('fonts/open-sans/opensans-bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/open-sans/opensans-bold.woff2') format('woff2'),
+    url('fonts/open-sans/opensans-bold.woff') format('woff'),
+    url('fonts/open-sans/opensans-bold.ttf') format('truetype'),
+    url('fonts/open-sans/opensans-bold.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'als_storyregular';
+    src: url('fonts/als_story/als_story_regular-webfont.eot');
+    src: url('fonts/als_story/als_story_regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/als_story/als_story_regular-webfont.woff2') format('woff2'),
+    url('fonts/als_story/als_story_regular-webfont.woff') format('woff'),
+    url('fonts/als_story/als_story_regular-webfont.ttf') format('truetype'),
+    url('fonts/als_story/als_story_regular-webfont.svg#als_storyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "novotype_regularregular";
+    src: url("fonts/novotype/novotype-regular-webfont.eot");
+    src: url("fonts/novotype/novotype-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/novotype/novotype-regular-webfont.woff") format("woff"),
+    url("fonts/novotype/novotype-regular-webfont.woff2") format("woff2"),
+    url("fonts/novotype/novotype-regular-webfont.ttf") format("truetype"),
+    url("fonts/novotype/novotype-regular-webfont.woff#novotype-regular-webfont") format("svg"); }
+
+@font-face {
+    font-family: "novotypemedium";
+    src: url("fonts/novotype/novotype-medium-webfont.eot");
+    src: url("fonts/novotype/novotype-medium-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/novotype/novotype-medium-webfont.woff") format("woff"),
+    url("fonts/novotype/novotype-medium-webfont.woff2") format("woff2"),
+    url("fonts/novotype/novotype-medium-webfont.ttf") format("truetype"),
+    url("fonts/novotype/novotype-medium-webfont.woff#novotype-medium-webfont") format("svg"); }
+
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: #f3f4f9;
+    font-family: "als_storyregular", sans-serif;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+
+/*_____________
+
+HEADER
+____________*/
+
+header {
+    text-align: center;
+}
+
+header a {
+    display: inline-block;
+    padding: 15px 0;
+}
+
+header img {
+    height: 50px;
+}
+
+header span {
+    display: block;
+}
+@media screen and (min-width:992px){
+    header a{
+        padding: 50px 0;
+    }
+    header img{
+        height: 100px;
+    }
+}
+
+
+/*_____________
+
+SOCIAL ICONS
+____________*/
+
+.social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social li a {
+    padding: 0 10px;
+    color: #ff4c67;
+    font-size: 20px;
+}
+
+.social li a,
+.social li > i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social li i.fa-circle {
+    color: #3b6cde;
+    font-size: 6px;
+}
+
+@media screen and (min-width:992px){
+    .social{
+        margin-bottom: 30px;
+    }
+}
+
+/**** TOOLTIP ****/
+
+.tooltip {
+    opacity: 1;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #cbd8f3;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #cbd8f3;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #cbd8f3;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #cbd8f3;
+}
+
+.tooltip-inner {
+    color: #3b6cde;
+    background-color: #cbd8f3;
+    font-family: 'novotype_regularregular', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/*_____________
+
+CONTENT
+____________*/
+
+section {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 780px;
+}
+
+
+/**** POST BOX ****/
+
+.post {
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 65px 0px rgba(60, 108, 222, 0.25);
+    border-radius: 5px;
+}
+
+
+/* POST THUMB */
+.post .thumb a{
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+.post .thumb img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+@media screen and (min-width:700px){
+    .post .thumb a{
+        height: 300px;
+    }
+    .post .thumb img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: auto;
+        width: 100%;
+
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+/* POST BODY */
+
+.post .media {
+    margin: 0;
+}
+.post .media-right,
+.post .media-body{
+    display: block;
+}
+.post .media-right {
+    width: 100%;
+}
+.post .media-right {
+    padding: 15px;
+    height: 100%;
+    color: #ffffff;
+    background: rgba(60, 109, 222, 1);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(60, 109, 222, 1)), color-stop(100%, rgba(109, 153, 255, 1)));
+    background: linear-gradient(to right, rgba(60, 109, 222, 1) 0%, rgba(109, 153, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3c6dde', endColorstr='#6d99ff', GradientType=1);
+}
+.post-red .media-right {
+    padding: 15px;
+    height: 100%;
+    color: #ffffff;
+    background: rgba(255, 76, 103, 1);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 76, 103, 1)), color-stop(100%, rgba(255, 131, 146, 1)));
+    background: linear-gradient(to right, rgba(255, 76, 103, 1) 100%, rgba(255, 131, 146, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff4c67', endColorstr='#6d99ff', GradientType=1);
+}
+.author-thumb,
+.post aside{
+    display: table-cell;
+    vertical-align: top;
+}
+.author-thumb a{
+    display: block;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.post aside {
+    padding-left: 15px;
+}
+.author-name a,
+.tags,
+.date{
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: 'novotypemedium', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 20px;
+}
+.tags{
+    margin-bottom: 0;
+}
+.author-name a{
+    font-family: 'novotypemedium', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.tags a{
+    color: #ffffff;
+}
+.tags i,
+.date i{
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.post .media-body {
+    padding: 15px;
+    width: 100%;
+    background: #ffffff;
+}
+.post .title,
+.post .content{
+    margin-bottom: 15px;
+}
+.post .title {
+    color: #3b6cde;
+    margin-top: 0;
+    font-family: 'Fira Sans Medium', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.post .title a {
+    color: #3b6cde;
+}
+
+.post .title a:hover,
+.post .title a:focus,
+.post .title a:active {
+    color: #7c99d6;
+}
+
+.post .content {
+    color: #2d434e;
+}
+
+.post .more {
+    display: inline-block;
+    color: #ff4c67;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-radius: 18px;
+}
+
+.post .more:hover,
+.post .more:focus,
+.post .more:active {
+    color: #FF8392;
+}
+
+@media screen and (min-width: 992px){
+    .post .media-right,
+    .post .media-body{
+        display: table-cell;
+    }
+    .post .media-right{
+        width: 20%;
+    }
+    .post .media-body{
+        padding: 20px 25px;
+        width: 10000px;
+    }
+    .author-thumb,
+    .post aside{
+        display: block;
+    }
+    .post aside{
+        padding: 0;
+    }
+    .tags,
+    .date{
+        position: relative;
+        padding-left: 20px;
+    }
+    .author-thumb a{
+        margin: 0 auto;
+        width: 50px;
+    }
+    .author-name a{
+        margin: 10px 0;
+        text-align: center;
+    }
+    .tags i,
+    .date i{
+        position: absolute;
+        left: 0;
+        top: 4px;
+        margin: 0;
+    }
+}
+
+
+/*ARTICLE*/
+.post.article{
+    margin-bottom: 20px;
+}
+.post .thumb a{
+    height: 240px;
+}
+.post.article .panel {
+    border: none;
+    margin: 0;
+}
+
+.post.article .title {
+    margin-top: 10px;
+    line-height: 24px;
+}
+
+.post.article .extra {
+    border-top: 1px solid #e7efff;
+    border-bottom: 1px solid #e7efff;
+    padding: 10px 0;
+}
+.article .author-name a{
+    color: #FF8392;
+}
+.article .tags,
+.article .tags a,
+.article .date{
+    color: #7c99d6;
+}
+.article .date,
+.article .tags {
+    display: block;
+    vertical-align: middle;
+}
+.post.article .extra i.fa {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.post.article p{
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+}
+div.prism-show-language > div.prism-show-language-label {
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #ffffff;
+    color: #7c99d6;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+pre[class*="language-"]{
+    margin: 10px 0;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+    border: none;
+    background: #edf3ff;
+}
+@media screen and (min-width: 500px){
+    .post .thumb a{
+        height: 360px;
+    }
+}
+@media screen and (min-width: 700px){
+    .post .thumb a{
+        height: 420px;
+    }
+}
+@media screen and (min-width: 992px){
+    .post .thumb a{
+        height: 480px;
+    }
+    .article .author-thumb,
+    .article aside{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .article aside{
+        padding-left: 15px;
+        width: 2000px;
+    }
+    .article .author-name{
+        float: left;
+    }
+    .article .author-meta {
+        float: right;
+    }
+    .article .author-name a,
+    .article .tags,
+    .article .date{
+        margin: 0;
+    }
+    .article .tags,
+    .article .date{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .article .date{
+        margin-right: 15px;
+    }
+}
+
+
+/*Image placeholder*/
+.placeholder {
+    background-color: #f6f6f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.post .placeholder img {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transition: opacity 1s linear;
+
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.placeholder img.loaded {
+    opacity: 1;
+}
+.placeholder-bottom{
+    padding-bottom: 66.6%;
+}
+
+.img-small {
+    filter: blur(50px);
+    /* this is needed so Safari keeps sharp edges */
+    transform: scale(1);
+}
+
+/*FOOTER*/
+footer{
+    margin: 0 auto;
+    width: 90%;
+}
+footer p{
+    margin-bottom: 30px;
+    font-family: 'Fira Sans Medium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+footer p span{
+    display: block;
+}
